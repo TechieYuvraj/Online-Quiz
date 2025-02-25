@@ -1,5 +1,5 @@
 # Online Quiz
-![developer](https://img.shields.io/badge/Developed%20By%20%3A-Sumit%20Kumar-red)
+![developer](https://www.linkedin.com/in/yuvraj-pratap-singh-802773256/)
 ---
 ## screenshots
 ### Homepage
