@@ -1,5 +1,30 @@
+## DEVELOPER
+### Social Links
+Feel free to connect with me on social media:
 
----
+- [LinkedIn](https://www.linkedin.com/in/yuvraj-pratap-singh-802773256/)
+- [GitHub](https://github.com/TechieYuvraj/)
+- [Instagram](https://instagram.com/tech_soul_boy)
+
+## Screenshots
+Here are some screenshots of the application:
+
+- Admin Homepage
+  ![Admin Homepage](static/screenshots/adminhomepage.png)
+  
+- Exam Page
+  ![Exam Page](static/screenshots/exam.png)
+  
+- Homepage
+  ![Homepage](static/screenshots/homepage.png)
+  
+- Rules Page
+  ![Rules Page](static/screenshots/rules.png)
+  
+- Teacher Page
+  ![Teacher Page](static/screenshots/teacher.png)
+
+
 ## Functions
 ### Admin
 - Create Admin account using command
@@ -58,9 +83,3 @@ EMAIL_RECEIVING_USER = 'youremail@gmail.com'
 
 ## Drawbacks/LoopHoles
 - Admin/Teacher can add any number of questions to any course, But while adding course, admin provide question number.
-
-
-## Feedback
-Any suggestion and feedback is welcome. You can message me on facebook
-- [Contact on Facebook](https://fb.com/sumit.luv)
-- [Subscribe my Channel LazyCoder On Youtube](https://youtube.com/lazycoders)
