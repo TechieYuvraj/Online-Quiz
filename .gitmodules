@@ -1,0 +1,3 @@
+[submodule "frontend-framework"]
+    path = frontend
+    url = https://github.com/example/frontend-framework.git
