@@ -1,4 +1,4 @@
-from onlinequiz.wsgi import application  # Import your Django WSGI app
+from onlinequiz.wsgi import application  # Adjust this to your project’s name
+from vercel_lambda_adapter import vercel_wsgi
 
-def handler(event, context):
-    return application(event, context)
+handler = vercel_wsgi(application)
