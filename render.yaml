@@ -4,6 +4,6 @@ services:
     name: onlinequiz
     env: python
     plan: free
-    buildCommand: "pip install -r requirements.txt"
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
     startCommand: "gunicorn onlinequiz.wsgi:application"
     autoDeploy: true
