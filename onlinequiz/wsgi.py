@@ -8,11 +8,24 @@ https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/
 """
 
 import os
+import sys
+import logging
 
-from django.core.wsgi import get_wsgi_application
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+
+try:
+    from django.core.wsgi import get_wsgi_application
+except Exception as e:
+    logging.error("Failed to import Django WSGI application: %s", e)
+    sys.exit(1)
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'onlinequiz.settings')
 
-application = get_wsgi_application()
+try:
+    application = get_wsgi_application()
+except Exception as e:
+    logging.error("Failed to get WSGI application: %s", e)
+    sys.exit(1)
 
 app = application
