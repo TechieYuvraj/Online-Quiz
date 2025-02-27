@@ -1,13 +1,16 @@
 {
     "version": 2,
-    "builds": [{ 
-        "src": "onlinequiz/wsgi.py", 
-        "use": "@vercel/python"
-    }],
+    "functions": {
+      "api/index.py": {
+        "runtime": "@vercel/python",
+        "maxDuration": 30
+      }
+    },
     "routes": [
-        { 
-            "src": "/(.*)", 
-            "dest": "onlinequiz/wsgi.py" 
-        }
+      {
+        "src": "/(.*)",
+        "dest": "api/index.py"
+      }
     ]
-}
+  }
+  
