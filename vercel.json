@@ -2,7 +2,8 @@
     "version": 2,
     "functions": {
       "api/index.py": {
-        "runtime": "@vercel/python"
+        "runtime": "@vercel/python",
+        "runtimeVersion": "python3.9"
       }
     },
     "routes": [
