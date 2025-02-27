@@ -1,14 +1,13 @@
 {
-    "version": 2,
-    "functions": {
-      "api/index.py": {
-        "runtime": "@vercel/python@1.0.0"
-      }
-    },
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "api/index.py"
-      }
-    ]
+  "version": 2,
+  "builds": [{ 
+    "src": "onlinequiz/wsgi.py", 
+    "use": "@vercel/python",
+    "config": { "maxLambdaSize": "15mb", "runtime": "edge" }
+  }],
+  "routes": [
+    { 
+      "src": "/(.*)", 
+      "dest": "onlinequiz/wsgi.py" }
+  ]
 }
