@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# Developing by - Yuvraj Pratap Singh
+# Date - 24nd February 2025
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
