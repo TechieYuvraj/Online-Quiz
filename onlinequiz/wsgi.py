@@ -1,7 +1,8 @@
 """
 WSGI config for onlinequiz project.
 
-It exposes the WSGI callable as a module-level variable named ``app``.
+It exposes the WSGI callable as a module-level variable named ``application`` for local development
+and ``app`` for Vercel.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/
@@ -23,7 +24,8 @@ except Exception as e:
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'onlinequiz.settings')
 
 try:
-    app = get_wsgi_application()
+    application = get_wsgi_application()
+    app = application # For Vercel deployment
 except Exception as e:
     logging.error("Failed to get WSGI application: %s", e)
     sys.exit(1)
