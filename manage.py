@@ -4,7 +4,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-
+from onlinequiz.wsgi import app  # Import the WSGI application
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'onlinequiz.settings')
@@ -17,7 +17,6 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
-
 
 if __name__ == '__main__':
     main()
