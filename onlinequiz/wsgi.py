@@ -24,8 +24,7 @@ except Exception as e:
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'onlinequiz.settings')
 
 try:
-    application = get_wsgi_application()
-    app = application # For Vercel deployment
+    app = get_wsgi_application()
 except Exception as e:
     logging.error("Failed to get WSGI application: %s", e)
     sys.exit(1)
