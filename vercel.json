@@ -1,12 +1,6 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "manage.py",
-      "use": "@vercel/python",
-      "config": { "zeroConfig": true, "runtime": "python3.8" }
-    }
-  ],
+  "buildCommand": "python manage.py collectstatic --noinput",
   "routes": [
     { "src": "/static/(.*)", "dest": "/static/$1" },
     { "src": "/(.*)", "dest": "manage.py" }
