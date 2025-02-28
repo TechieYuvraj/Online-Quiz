@@ -9,7 +9,7 @@ urlpatterns = [
     path('student/',include('student.urls')),
     
 
-
+    path('', include('onlinequiz.urls')),
     path('',views.home_view,name=''),
     path('logout', LogoutView.as_view(template_name='quiz/logout.html'),name='logout'),
     path('aboutus', views.aboutus_view),
