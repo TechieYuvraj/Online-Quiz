@@ -2,6 +2,17 @@ from django.urls import path, include
 from django.contrib import admin
 from quiz import views
 from django.contrib.auth.views import LogoutView, LoginView
+from django.core.management import call_command
+from django.http import HttpResponse
+
+def run_migrations(request):
+    call_command('migrate')
+    return HttpResponse("Migrations applied successfully.")
+
+urlpatterns = [
+    path("run-migrations/", run_migrations),  # Add this temporarily
+]
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
