@@ -4,12 +4,14 @@ from quiz import views
 from django.contrib.auth.views import LogoutView, LoginView
 from django.core.management import call_command
 from django.http import HttpResponse
+from django.urls import path
 
 def run_migrations(request):
     call_command('migrate')
     return HttpResponse("Migrations applied successfully.")
 
 urlpatterns = [
+    path("admin/", admin.site.urls),
     path("run-migrations/", run_migrations),  # Add this temporarily
 ]
 
