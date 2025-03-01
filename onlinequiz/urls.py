@@ -4,22 +4,10 @@ from quiz import views
 from django.contrib.auth.views import LogoutView, LoginView
 from django.core.management import call_command
 from django.http import HttpResponse
-import pprint
-from django.urls import get_resolver
-
-pp = pprint.PrettyPrinter(indent=4)
-pp.pprint(get_resolver().url_patterns)
-
 
 def run_migrations(request):
     call_command('migrate')
     return HttpResponse("Migrations applied successfully.")
-
-urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("run-migrations/", run_migrations),  # Add this temporarily
-]
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
