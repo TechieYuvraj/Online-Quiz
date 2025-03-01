@@ -4,7 +4,6 @@ from quiz import views
 from django.contrib.auth.views import LogoutView, LoginView
 from django.core.management import call_command
 from django.http import HttpResponse
-from django.urls import path
 import pprint
 from django.urls import get_resolver
 
